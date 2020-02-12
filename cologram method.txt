@@ -1,0 +1,15 @@
+#take all images in folder and print out the top 3 colors for the every image in the folder 
+#pip install cologram.py
+#pip install os-win
+
+from PIL import Image
+import glob
+import colorgram
+image_list = []
+for filename in glob.glob(r'C:\Users\vamsee\Dropbox\AnimePoster\Spiderman10seconds\*.jpg'): #assuming jpg
+    im=Image.open(filename)
+    image_list.append(im)
+
+for image in image_list:
+    colors = colorgram.extract(image, 3)
+    print(colors)

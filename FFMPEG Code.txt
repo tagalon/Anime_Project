@@ -1,0 +1,9 @@
+ffmpeg -i E:\Libraries\Downloads\Spiderman\Spiderman.mkv -vf fps=1/360 %03d.jpg
+
+"" Output one image every minute, named img001.jpg, img002.jpg, img003.jpg, etc. The %03d dictates that the ordinal number of each output image will be formatted using 3 digits.
+"" -I is input and filepath to location file
+
+
+ffmpeg -i E:\Libraries\Downloads\Spiderman\Spiderman.mkv -vf fps=1/10 %03d.jpg
+
+"output every 10 seconds 
